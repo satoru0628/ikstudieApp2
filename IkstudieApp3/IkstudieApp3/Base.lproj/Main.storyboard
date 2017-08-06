@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7nW-xa-EHG">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ems-X6-6LQ">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="LeX-3p-kP3">
             <objects>
-                <viewController id="FMX-yQ-XbS" sceneMemberID="viewController">
+                <viewController id="FMX-yQ-XbS" customClass="HomeViewController" customModule="IkstudieApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rcJ-RV-GBF"/>
                         <viewControllerLayoutGuide type="bottom" id="zkz-Ve-zFc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OLM-J0-Bwa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -26,7 +26,188 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srX-lA-4wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661.60000000000002" y="350.37481259370315"/>
+            <point key="canvasLocation" x="660" y="349.64788732394368"/>
+        </scene>
+        <!--Mypage View Controller-->
+        <scene sceneID="axe-bo-0PL">
+            <objects>
+                <viewController id="Xjb-m5-Vzq" customClass="MypageViewController" customModule="IkstudieApp3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nkt-Q9-9K2"/>
+                        <viewControllerLayoutGuide type="bottom" id="3mN-nE-Fuq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LdE-1e-q1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6z-dL-CqI">
+                                <rect key="frame" x="0.0" y="64" width="320" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oYM-Nn-Abq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkq-el-wXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="1069.1154422788607"/>
+        </scene>
+        <!--Registration Form View Controller-->
+        <scene sceneID="oc7-KR-gWd">
+            <objects>
+                <viewController id="ems-X6-6LQ" customClass="RegistrationFormViewController" customModule="IkstudieApp3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMq-Wj-r5m"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tda-7o-A1p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n93-O8-9qC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSF-4I-mic">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xyy-sy-CE5">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ニックネームを決めましょう！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-6f-v6o">
+                                                <rect key="frame" x="19" y="47" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="↓コースを選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L84-sc-5xk">
+                                                <rect key="frame" x="19" y="156" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="↓現在の学年を選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD0-oz-fiY">
+                                                <rect key="frame" x="19" y="319" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="↓志望校を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgp-Wb-bIz">
+                                                <rect key="frame" x="19" y="481" width="283" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="志望校を公開する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7I-aY-7kA">
+                                                <rect key="frame" x="82" y="574" width="220" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大学" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9m-fq-HAB">
+                                                <rect key="frame" x="117" y="527" width="40" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学部" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGc-cJ-28e">
+                                                <rect key="frame" x="263" y="526" width="39" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIP-0Y-3bg">
+                                                <rect key="frame" x="19" y="83" width="283" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3N1-N8-lhd">
+                                                <rect key="frame" x="19" y="190" width="283" height="106"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39O-42-lPt">
+                                                <rect key="frame" x="19" y="348" width="283" height="106"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYj-wC-v72">
+                                                <rect key="frame" x="19" y="522" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hos-40-baq">
+                                                <rect key="frame" x="165" y="522" width="90" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IC-wj-uTp">
+                                                <rect key="frame" x="19" y="569" width="51" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </switch>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYB-MV-exB">
+                                                <rect key="frame" x="19" y="642" width="130" height="130"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diK-P1-xic">
+                                                <rect key="frame" x="165" y="692" width="137" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="プロフィール画像を設定"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-IQ-JiM">
+                                                <rect key="frame" x="66" y="822" width="188" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.29160442949999998" green="0.56568789480000004" blue="0.88535696269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="会員登録する">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="900" id="m42-kR-eUF"/>
+                                            <constraint firstAttribute="height" constant="900" id="rWt-Ys-UP2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xyy-sy-CE5" firstAttribute="leading" secondItem="oSF-4I-mic" secondAttribute="leading" id="6vb-v8-MW6"/>
+                                    <constraint firstItem="Xyy-sy-CE5" firstAttribute="leading" secondItem="oSF-4I-mic" secondAttribute="leading" id="OSE-Vg-eWk"/>
+                                    <constraint firstItem="Xyy-sy-CE5" firstAttribute="top" secondItem="oSF-4I-mic" secondAttribute="top" id="Ttw-Dz-wcs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xyy-sy-CE5" secondAttribute="bottom" id="gsz-ye-Eey"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xyy-sy-CE5" secondAttribute="trailing" id="iUu-j8-icI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xyy-sy-CE5" secondAttribute="bottom" id="lbN-GY-uJx"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xyy-sy-CE5" secondAttribute="bottom" id="r0Y-eR-LrO"/>
+                                    <constraint firstItem="Xyy-sy-CE5" firstAttribute="top" secondItem="oSF-4I-mic" secondAttribute="top" id="tYG-ue-OR8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xyy-sy-CE5" secondAttribute="trailing" id="wBu-h1-cMr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oSF-4I-mic" firstAttribute="top" secondItem="n93-O8-9qC" secondAttribute="top" id="0tj-KU-Io3"/>
+                            <constraint firstItem="oSF-4I-mic" firstAttribute="leading" secondItem="n93-O8-9qC" secondAttribute="leading" id="VxU-QQ-u1e"/>
+                            <constraint firstAttribute="bottom" secondItem="oSF-4I-mic" secondAttribute="bottom" id="gjF-7Q-NAy"/>
+                            <constraint firstItem="oSF-4I-mic" firstAttribute="top" secondItem="n93-O8-9qC" secondAttribute="top" id="t0J-0v-6mN"/>
+                            <constraint firstItem="Xyy-sy-CE5" firstAttribute="width" secondItem="n93-O8-9qC" secondAttribute="width" id="uAQ-24-0yG"/>
+                            <constraint firstAttribute="trailing" secondItem="oSF-4I-mic" secondAttribute="trailing" id="zHe-Js-34k"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="900"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTD-Nh-KoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2938.125" y="505.98591549295776"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RmO-E0-218">
@@ -40,36 +221,73 @@
                     <connections>
                         <segue destination="gHv-lZ-ifU" kind="relationship" relationship="viewControllers" id="hJd-Vr-34b"/>
                         <segue destination="nrV-y7-bff" kind="relationship" relationship="viewControllers" id="Nhg-d1-tTE"/>
+                        <segue destination="qrN-sP-p8R" kind="relationship" relationship="viewControllers" id="cjC-Qw-sVb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgB-DY-DGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1230" y="25"/>
+            <point key="canvasLocation" x="-1671" y="508"/>
         </scene>
-        <!--View Controller-->
+        <!--Question Send Form View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IkstudieApp3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuestionSendFormViewController" customModule="IkstudieApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTq-TN-K0B">
+                                <rect key="frame" x="11" y="156" width="293" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問を投稿する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4X-Rs-wTB">
+                                <rect key="frame" x="16" y="83" width="140" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ooO-Z1-hvJ">
+                                <rect key="frame" x="41" y="266" width="233" height="104"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyE-I9-lNP">
+                                <rect key="frame" x="34" y="442" width="247" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2916044294834137" green="0.56568789482116699" blue="0.88535696268081665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="質問を投稿する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カテゴリを選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t3-Un-0VE">
+                                <rect key="frame" x="34" y="215" width="240" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="WBI-Ca-52T"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="-352.17391304347831"/>
+            <point key="canvasLocation" x="660" y="-352.81690140845069"/>
         </scene>
-        <!--Item-->
+        <!--質問投稿-->
         <scene sceneID="FO7-gB-FPN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nrV-y7-bff" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FHI-c6-ZNc"/>
+                    <tabBarItem key="tabBarItem" title="質問投稿" id="FHI-c6-ZNc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1n7-tG-6he">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -84,11 +302,11 @@
             </objects>
             <point key="canvasLocation" x="-279.19999999999999" y="-352.17391304347831"/>
         </scene>
-        <!--Item 2-->
+        <!--ホーム-->
         <scene sceneID="Cic-EB-6qh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gHv-lZ-ifU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Sea-cT-cQt"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" id="Sea-cT-cQt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAf-mS-DJb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -102,6 +320,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93M-VU-iXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-277.60000000000002" y="350.37481259370315"/>
+        </scene>
+        <!--マイページ-->
+        <scene sceneID="rx3-d3-RxK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrN-sP-p8R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="マイページ" id="wJw-KB-7Bl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ieh-DC-L5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xjb-m5-Vzq" kind="relationship" relationship="rootViewController" id="tq8-Sa-BFo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVj-P0-6Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279.19999999999999" y="1069.1154422788607"/>
         </scene>
     </scenes>
 </document>
