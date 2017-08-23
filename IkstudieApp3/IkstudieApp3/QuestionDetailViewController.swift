@@ -9,6 +9,9 @@
 import UIKit
 
 class QuestionDetailViewController: UIViewController {
+    
+    // questionの情報を入れておくDictionary変数
+    var question: Dictionary<String, Any?>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
