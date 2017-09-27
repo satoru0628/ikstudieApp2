@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
-class QuestionSendFormViewController: UIViewController, UITextFieldDelegate,
+class QuestionSendFormViewController: UIViewController, UITextViewDelegate,
                                       UIPickerViewDelegate, UIPickerViewDataSource{
     
-    @IBOutlet var QuestionTextField: UITextField!
+    @IBOutlet var QuestionTextView: UITextView!
     
     let categoryList = ["数学", "英語", "現代文", "日本史", "物理"]
     
     var questions = [Dictionary<String, Any>]()
+    
+    // 0926追記
+    var ref:DatabaseReference!
+    
 
     override func viewDidLoad() {
         
@@ -26,9 +31,15 @@ class QuestionSendFormViewController: UIViewController, UITextFieldDelegate,
         
         super.viewDidLoad()
         
-        QuestionTextField.delegate = self
+        QuestionTextView.delegate = self
+        
+        // テキストを全消去するボタンを表示
+        //QuestionTextView.clearButtonMode = .always
 
         // Do any additional setup after loading the view.
+        
+        // 0926追記インスタンスを作成
+        ref = Database.database().reference()
     }
     
     //PickerViewに表示する列数を返す
@@ -51,78 +62,100 @@ class QuestionSendFormViewController: UIViewController, UITextFieldDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        QuestionTextField.resignFirstResponder()
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        QuestionTextView.resignFirstResponder()
         return true
     }
     
     // categoryを保存するためのコード
-    var category: String?
+    var category: String? = "数学"
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // 選択時の処理
         category = categoryList[row]
     }
     
-    @IBAction func sendQuestion(){
-        
-        if QuestionTextField.text != nil{
-            // UserDefaults(保存)
-            // let ud = UserDefaults.standard
-            // ud.set(titleTextField.text, forKey: "title")
-            // ud.synchronize()
-        }else{
-            let  alert = UIAlertController(title: "title", message: "質問内容を記入してください", preferredStyle: .alert)
-            let  action = UIAlertAction(title: "OK!", style: .default, handler:{ (action) in})
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        if QuestionTextField.text != nil {
-            
-            // UserDefaultsにカテゴリと質問内容を辞書型配列に保存する
-            
-            let ud = UserDefaults.standard
-            if ud.object(forKey: "questions") != nil {
-                questions = ud.object(forKey: "questions") as! [Dictionary<String, Any>]
-                // QuestionTextFieldの先頭の８文字をshortTitleとして取得
-                let shortTitle = QuestionTextField.text!
-                var shortTitle2 = shortTitle.substring(to: shortTitle.index(shortTitle.startIndex,
-                                                                offsetBy: 8))
-                
-                //↓カテゴリが保存できるようになっていないので修正
-                let question: Dictionary<String, Any> = ["category": category!,
-                                                         "shortTitle": shortTitle2,
-                                                         "detail": QuestionTextField.text!]
-                questions.append(question)
-            } else {
-                let shortTitle = QuestionTextField.text!
-                var shortTitle2 = shortTitle.substring(to: shortTitle.index(shortTitle.startIndex,
-                                                                            offsetBy: 8))
-                
-                //↓カテゴリが保存できるようになっていないので修正
-                let question: Dictionary<String, Any> = ["category": category!,
-                                                         "shortTitle": shortTitle2,
-                                                         "detail": QuestionTextField.text!]
-                questions.append(question)
-            }
-            
-            ud.set(questions, forKey: "questions")
-            ud.synchronize()
-            
-            let alert = UIAlertController(title: "投稿完了！", message: "あなたの質問が投稿されました！", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK!", style: .default, handler: { (action) in
-                alert.dismiss(animated: true, completion: nil)
-                self.tabBarController?.selectedIndex = 0
-            })
-            
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-            
-            // 以下、後で消す
-            questions.reverse()
-            print(questions)
-            
-        }
+    // 質問日時の取得
+    func getNowClockString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM月dd日"
+        let now = Date()
+        return formatter.string(from: now)
+    }
+    
+//    @IBAction func sendQuestion(){
+//
+//        if QuestionTextView.text != nil{
+//            // UserDefaults(保存)
+//            // let ud = UserDefaults.standard
+//            // ud.set(titleTextField.text, forKey: "title")
+//            // ud.synchronize()
+//        }else{
+//            let  alert = UIAlertController(title: "title", message: "質問内容を記入してください", preferredStyle: .alert)
+//            let  action = UIAlertAction(title: "OK!", style: .default, handler:{ (action) in})
+//            alert.addAction(action)
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//
+//        if QuestionTextView.text != nil {
+//
+//            // UserDefaultsにカテゴリと質問内容を辞書型配列に保存する
+//
+//            let ud = UserDefaults.standard
+//            if ud.object(forKey: "questions") != nil {
+//                questions = ud.object(forKey: "questions") as! [Dictionary<String, Any>]
+//                // QuestionTextViewの先頭の８文字をshortTitleとして取得
+//                let shortTitle = QuestionTextView.text!
+//                var shortTitle2 = shortTitle.substring(to: shortTitle.index(shortTitle.startIndex,
+//                                                                offsetBy: 8))
+//
+//
+//                // UDへの保存
+//                let question: Dictionary<String, Any> = ["category": category!,
+//                                                         "shortTitle": shortTitle2,
+//                                                         "detail": QuestionTextView.text!,
+//                                                         "time": getNowClockString()]
+//                questions.append(question)
+//            } else {
+//                let shortTitle = QuestionTextView.text!
+//                var shortTitle2 = shortTitle.substring(to: shortTitle.index(shortTitle.startIndex,
+//                                                                            offsetBy: 8))
+//
+//                let question: Dictionary<String, Any> = ["category": category!,
+//                                                         "shortTitle": shortTitle2,
+//                                                         "detail": QuestionTextView.text!,
+//                                                         "time": getNowClockString()]
+//                questions.append(question)
+//            }
+//
+//
+//            ud.set(questions, forKey: "questions")
+//            ud.synchronize()
+//
+//            let alert = UIAlertController(title: "投稿完了！", message: "あなたの質問が投稿されました！", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "OK!", style: .default, handler: { (action) in
+//                alert.dismiss(animated: true, completion: nil)
+//                self.tabBarController?.selectedIndex = 0
+//            })
+//
+//            alert.addAction(action)
+//            self.present(alert, animated: true, completion: nil)
+//
+//            // 以下、後で消す
+//            // questions.reverse()
+//            // print(questions)
+//
+//        }
+//    }
+    
+
+// 0926追記
+    @IBAction func sendTest(_ sender: AnyObject){
+        let shortTitle = QuestionTextView.text.substring(to: QuestionTextView.text.index(QuestionTextView.text.startIndex,offsetBy: 8))
+        let testQuestionData = ["detail": QuestionTextView.text!,
+                                "category": category!,
+                                "shortTitle": shortTitle,
+                                "time": getNowClockString()]
+        ref.child("question").childByAutoId().setValue(testQuestionData)
     }
     
 

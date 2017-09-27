@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -57,10 +58,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // 表示させるセルの中身を指定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 先ずはStoryboardでidを指定した再利用可能なセルを取得
-        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell")! as! CustomTableViewCell
         
         // セルにquestions配列の中身を表示
-        cell.textLabel?.text = questions[indexPath.row]["shortTitle"] as! String
+        cell.shortTitleTextView?.text = questions[indexPath.row]["shortTitle"] as! String
+        cell.categoryLabel?.text = questions[indexPath.row]["category"] as! String
         
         return cell
     }
@@ -74,7 +76,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // 画面遷移時に呼ばれるViewControllerが標準で持っている機能
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面を取得して、DetailViewControllerに変換
-        let detailViewController = segue.destination as! QuestionDetailViewController
+        let questionDetailViewController = segue.destination as! QuestionDetailViewController
         
         // 選択されているセルのindexPathを取得
         let selectedIndexPath = questionTableView.indexPathForSelectedRow
@@ -83,7 +85,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let selectedQuestion = questions[selectedIndexPath!.row]
         
         // QuestionDetailViewControllerのquestion変数に今選ばれているquestionを代入
-        // QuestionDetailViewController.question = selectedQuestion
+        questionDetailViewController.question = selectedQuestion
     }
 
 

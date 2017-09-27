@@ -19,9 +19,14 @@
 		3E9C7D7F1F36E59C00CC2DB7 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C7D7E1F36E59C00CC2DB7 /* MypageViewController.swift */; };
 		3E9C7D811F36EA9000CC2DB7 /* RegistrationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C7D801F36EA9000CC2DB7 /* RegistrationFormViewController.swift */; };
 		3E9C7D831F36EAB400CC2DB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C7D821F36EAB400CC2DB7 /* HomeViewController.swift */; };
+		3ECF557D1F5BF72500A8C0E6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF557C1F5BF72500A8C0E6 /* CustomTableViewCell.swift */; };
+		3EE2C02D1F6D253B00E813B9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2C02C1F6D253B00E813B9 /* TestViewController.swift */; };
+		3EE3159C1F6CF9A700B6166F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EE3159B1F6CF9A700B6166F /* GoogleService-Info.plist */; };
+		840ED3695FBF3416C13BA20D /* Pods_IkstudieApp3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316B8F3077E47DB219CC346F /* Pods_IkstudieApp3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		316B8F3077E47DB219CC346F /* Pods_IkstudieApp3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IkstudieApp3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E2D59A31F386BBE00C71B99 /* RespondentsEditMypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RespondentsEditMypageViewController.swift; path = ../RespondentsEditMypageViewController.swift; sourceTree = "<group>"; };
 		3E2D59A51F3B047A00C71B99 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		3E2D59A71F3B065200C71B99 /* QuestionInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionInventoryViewController.swift; path = ../QuestionInventoryViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,11 @@
 		3E9C7D7E1F36E59C00CC2DB7 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MypageViewController.swift; path = ../MypageViewController.swift; sourceTree = "<group>"; };
 		3E9C7D801F36EA9000CC2DB7 /* RegistrationFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationFormViewController.swift; path = ../RegistrationFormViewController.swift; sourceTree = "<group>"; };
 		3E9C7D821F36EAB400CC2DB7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
+		3ECF557C1F5BF72500A8C0E6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = ../CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3EE2C02C1F6D253B00E813B9 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3EE3159B1F6CF9A700B6166F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8361F4CF1D4148A96C35C104 /* Pods-IkstudieApp3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IkstudieApp3.release.xcconfig"; path = "Pods/Target Support Files/Pods-IkstudieApp3/Pods-IkstudieApp3.release.xcconfig"; sourceTree = "<group>"; };
+		C9B3FC6A2ED6955F3CDD6C3D /* Pods-IkstudieApp3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IkstudieApp3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IkstudieApp3/Pods-IkstudieApp3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840ED3695FBF3416C13BA20D /* Pods_IkstudieApp3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +65,8 @@
 			children = (
 				3E7C0F591F2DDF1F00E700E3 /* IkstudieApp3 */,
 				3E7C0F581F2DDF1F00E700E3 /* Products */,
+				40DC46D7844D3FE21301BE81 /* Pods */,
+				6981E52D747739F36D9B0311 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,17 +85,37 @@
 				3E7C0F5C1F2DDF1F00E700E3 /* ViewController.swift */,
 				3E9C7D801F36EA9000CC2DB7 /* RegistrationFormViewController.swift */,
 				3E9C7D821F36EAB400CC2DB7 /* HomeViewController.swift */,
+				3ECF557C1F5BF72500A8C0E6 /* CustomTableViewCell.swift */,
 				3E9C7D7C1F36E35400CC2DB7 /* QuestionSendFormViewController.swift */,
 				3E9C7D7E1F36E59C00CC2DB7 /* MypageViewController.swift */,
-				3E2D59A71F3B065200C71B99 /* QuestionInventoryViewController.swift */,
 				3E2D59A51F3B047A00C71B99 /* QuestionDetailViewController.swift */,
 				3E2D59A31F386BBE00C71B99 /* RespondentsEditMypageViewController.swift */,
+				3E2D59A71F3B065200C71B99 /* QuestionInventoryViewController.swift */,
 				3E7C0F5E1F2DDF1F00E700E3 /* Main.storyboard */,
+				3EE2C02C1F6D253B00E813B9 /* TestViewController.swift */,
 				3E7C0F611F2DDF1F00E700E3 /* Assets.xcassets */,
 				3E7C0F631F2DDF1F00E700E3 /* LaunchScreen.storyboard */,
 				3E7C0F661F2DDF1F00E700E3 /* Info.plist */,
+				3EE3159B1F6CF9A700B6166F /* GoogleService-Info.plist */,
 			);
 			path = IkstudieApp3;
+			sourceTree = "<group>";
+		};
+		40DC46D7844D3FE21301BE81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3FC6A2ED6955F3CDD6C3D /* Pods-IkstudieApp3.debug.xcconfig */,
+				8361F4CF1D4148A96C35C104 /* Pods-IkstudieApp3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6981E52D747739F36D9B0311 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				316B8F3077E47DB219CC346F /* Pods_IkstudieApp3.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E7C0F691F2DDF1F00E700E3 /* Build configuration list for PBXNativeTarget "IkstudieApp3" */;
 			buildPhases = (
+				48E7B6D6F604F79A0CCD2BCE /* [CP] Check Pods Manifest.lock */,
 				3E7C0F531F2DDF1F00E700E3 /* Sources */,
 				3E7C0F541F2DDF1F00E700E3 /* Frameworks */,
 				3E7C0F551F2DDF1F00E700E3 /* Resources */,
+				59A47E8BC844E8F82A744D78 /* [CP] Embed Pods Frameworks */,
+				C218B7F137A2AD66293042B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,12 +181,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7C0F651F2DDF1F00E700E3 /* LaunchScreen.storyboard in Resources */,
+				3EE3159C1F6CF9A700B6166F /* GoogleService-Info.plist in Resources */,
 				3E7C0F621F2DDF1F00E700E3 /* Assets.xcassets in Resources */,
 				3E7C0F601F2DDF1F00E700E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48E7B6D6F604F79A0CCD2BCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IkstudieApp3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59A47E8BC844E8F82A744D78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IkstudieApp3/Pods-IkstudieApp3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IkstudieApp3/Pods-IkstudieApp3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C218B7F137A2AD66293042B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IkstudieApp3/Pods-IkstudieApp3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E7C0F531F2DDF1F00E700E3 /* Sources */ = {
@@ -159,10 +254,12 @@
 			files = (
 				3E2D59A81F3B065200C71B99 /* QuestionInventoryViewController.swift in Sources */,
 				3E7C0F5D1F2DDF1F00E700E3 /* ViewController.swift in Sources */,
+				3EE2C02D1F6D253B00E813B9 /* TestViewController.swift in Sources */,
 				3E9C7D7D1F36E35400CC2DB7 /* QuestionSendFormViewController.swift in Sources */,
 				3E2D59A41F386BBE00C71B99 /* RespondentsEditMypageViewController.swift in Sources */,
 				3E2D59A61F3B047A00C71B99 /* QuestionDetailViewController.swift in Sources */,
 				3E7C0F5B1F2DDF1F00E700E3 /* AppDelegate.swift in Sources */,
+				3ECF557D1F5BF72500A8C0E6 /* CustomTableViewCell.swift in Sources */,
 				3E9C7D811F36EA9000CC2DB7 /* RegistrationFormViewController.swift in Sources */,
 				3E9C7D7F1F36E59C00CC2DB7 /* MypageViewController.swift in Sources */,
 				3E9C7D831F36EAB400CC2DB7 /* HomeViewController.swift in Sources */,
@@ -286,8 +383,10 @@
 		};
 		3E7C0F6A1F2DDF1F00E700E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9B3FC6A2ED6955F3CDD6C3D /* Pods-IkstudieApp3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IkstudieApp3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -299,8 +398,10 @@
 		};
 		3E7C0F6B1F2DDF1F00E700E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8361F4CF1D4148A96C35C104 /* Pods-IkstudieApp3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IkstudieApp3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
