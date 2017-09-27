@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ems-X6-6LQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7nW-xa-EHG">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,17 +93,10 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="志望コース" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmd-KH-KTY">
-                                                <rect key="frame" x="96" y="125" width="129" height="21"/>
+                                                <rect key="frame" x="31" y="125" width="129" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="志望校" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEP-Zd-d3g">
-                                                <rect key="frame" x="96" y="148" width="129" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxO-VQ-FJz">
@@ -114,6 +107,9 @@
                                                 <state key="normal" title="プロフィールを編集する">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="profileSet:" destination="Xjb-m5-Vzq" eventType="touchUpInside" id="NzF-8w-wb3"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8j4-UN-CbZ">
                                                 <rect key="frame" x="0.0" y="215" width="320" height="99"/>
@@ -148,6 +144,27 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="courseLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="236-wh-81C">
+                                                <rect key="frame" x="162" y="125" width="150" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="univLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nez-wj-1wy">
+                                                <rect key="frame" x="162" y="146" width="150" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="志望校" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEP-Zd-d3g">
+                                                <rect key="frame" x="31" y="146" width="129" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -174,10 +191,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oYM-Nn-Abq"/>
+                    <connections>
+                        <outlet property="courseLabel" destination="236-wh-81C" id="l40-cE-Oi8"/>
+                        <outlet property="univLabel" destination="nez-wj-1wy" id="F0c-B8-av8"/>
+                        <segue destination="ems-X6-6LQ" kind="show" identifier="nextSegue2" id="E53-Zu-1P6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkq-el-wXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.5" y="1069.0140845070423"/>
+            <point key="canvasLocation" x="1657.5" y="1242.2535211267607"/>
         </scene>
         <!--Respondents Edit Mypage View Controller-->
         <scene sceneID="NVR-mA-5nD">
@@ -300,11 +322,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WY-jx-cQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2938.125" y="1411.2676056338028"/>
+            <point key="canvasLocation" x="-474" y="1243"/>
         </scene>
         <!--Registration Form View Controller-->
         <scene sceneID="oc7-KR-gWd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTD-Nh-KoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ems-X6-6LQ" customClass="RegistrationFormViewController" customModule="IkstudieApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aMq-Wj-r5m"/>
@@ -415,7 +438,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="プロフィール画像を設定"/>
                                                 <connections>
-                                                    <action selector="choosePicture" destination="ems-X6-6LQ" eventType="touchUpInside" id="2OS-0l-9da"/>
+                                                    <action selector="choosePicture" destination="ems-X6-6LQ" eventType="touchUpInside" id="YNF-Xl-3fF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-IQ-JiM">
@@ -426,6 +449,9 @@
                                                 <state key="normal" title="会員登録する">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="sendInfo" destination="ems-X6-6LQ" eventType="touchUpInside" id="wap-qK-vxg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La0-bP-0iO">
                                                 <rect key="frame" x="157" y="719" width="137" height="30"/>
@@ -433,7 +459,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="規定の写真から選択"/>
                                                 <connections>
-                                                    <action selector="goNextBySegue:" destination="ems-X6-6LQ" eventType="touchUpInside" id="DgD-2z-TDt"/>
+                                                    <action selector="goNextBySegue:" destination="ems-X6-6LQ" eventType="touchUpInside" id="LNw-lE-KpA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -470,17 +496,17 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
-                        <outlet property="imageView" destination="vYB-MV-exB" id="hqk-Te-2b1"/>
-                        <outlet property="pickerView1" destination="3N1-N8-lhd" id="YYX-TE-ycD"/>
-                        <outlet property="pickerView2" destination="39O-42-lPt" id="9aW-SQ-A5q"/>
-                        <outlet property="textField" destination="fYj-wC-v72" id="FUV-BO-Dig"/>
-                        <outlet property="textField2" destination="Hos-40-baq" id="mBe-eF-Y22"/>
+                        <outlet property="coursePickerView" destination="3N1-N8-lhd" id="1LF-e6-Yj5"/>
+                        <outlet property="departTextField" destination="Hos-40-baq" id="jpL-by-sFT"/>
+                        <outlet property="gradePickerView" destination="39O-42-lPt" id="iZ5-lt-8Jp"/>
+                        <outlet property="imageView" destination="vYB-MV-exB" id="Q1F-dG-NS5"/>
+                        <outlet property="nickNameTextField" destination="BIP-0Y-3bg" id="yip-pJ-Io4"/>
+                        <outlet property="univTextField" destination="fYj-wC-v72" id="vcg-XR-nxX"/>
                         <segue destination="c4d-Ov-ps2" kind="show" identifier="nextSegue" id="qfC-XI-sPf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DTD-Nh-KoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2938.125" y="505.98591549295776"/>
+            <point key="canvasLocation" x="2651" y="1244"/>
         </scene>
         <!--Next View-->
         <scene sceneID="8gn-RB-guE">
@@ -495,7 +521,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-Bb-daP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="851"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="120" id="RQB-OE-XUn" customClass="CustomTableViewCell" customModule="IkstudieApp3" customModuleProvider="target">
@@ -517,7 +543,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-E9-vAc">
-                                                    <rect key="frame" x="146" y="49" width="101" height="21"/>
+                                                    <rect key="frame" x="146" y="49" width="155" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -557,7 +583,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5HM-K5-yIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rXk-Da-Gal" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1344.375" y="770.07042253521126"/>
+            <point key="canvasLocation" x="4406.25" y="1243.3098591549297"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RmO-E0-218">
@@ -576,7 +602,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgB-DY-DGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-675" y="507.04225352112678"/>
+            <point key="canvasLocation" x="-474" y="350"/>
         </scene>
         <!--Question Send Form View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -634,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="-352.81690140845069"/>
+            <point key="canvasLocation" x="1658" y="-353"/>
         </scene>
         <!--質問投稿-->
         <scene sceneID="FO7-gB-FPN">
@@ -653,7 +679,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O34-sf-n8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-279.19999999999999" y="-352.17391304347831"/>
+            <point key="canvasLocation" x="718" y="-354"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="Cic-EB-6qh">
@@ -691,7 +717,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVj-P0-6Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718.125" y="1069.0140845070423"/>
+            <point key="canvasLocation" x="718" y="1243"/>
         </scene>
         <!--Question Inventory View Controller-->
         <scene sceneID="xPq-cq-9OV">
@@ -726,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXs-dd-6VC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-676.875" y="1435.5633802816901"/>
+            <point key="canvasLocation" x="-474" y="-355"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fk0-Yd-8yb">
@@ -744,7 +770,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpd-do-I2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2153" y="771"/>
+            <point key="canvasLocation" x="3521" y="1244"/>
         </scene>
     </scenes>
     <resources>

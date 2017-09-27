@@ -33,7 +33,8 @@ class CustomTableViewCell: UITableViewCell {
         
         //表示可能最大行数を指定
         myDescriptionLabel.numberOfLines = 0
+        myDescriptionLabel.sizeToFit()
         //単語の途中で改行されないようにする
-        //myDescriptionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        myDescriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
     }
 }

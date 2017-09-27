@@ -13,6 +13,7 @@
 		1B26989C1F4FAD8C00DE9FE1 /* dog1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2698981F4FAD8C00DE9FE1 /* dog1.jpg */; };
 		1B26989D1F4FAD8C00DE9FE1 /* dog2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B2698991F4FAD8C00DE9FE1 /* dog2.jpg */; };
 		1B26989F1F4FB19200DE9FE1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B26989E1F4FB19200DE9FE1 /* CustomTableViewCell.swift */; };
+		1BB0CE781F735A2400D41ACF /* ikstudieicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB0CE771F735A2400D41ACF /* ikstudieicon.png */; };
 		3E2D59A41F386BBE00C71B99 /* RespondentsEditMypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D59A31F386BBE00C71B99 /* RespondentsEditMypageViewController.swift */; };
 		3E2D59A61F3B047A00C71B99 /* QuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D59A51F3B047A00C71B99 /* QuestionDetailViewController.swift */; };
 		3E2D59A81F3B065200C71B99 /* QuestionInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D59A71F3B065200C71B99 /* QuestionInventoryViewController.swift */; };
@@ -34,6 +35,7 @@
 		1B2698981F4FAD8C00DE9FE1 /* dog1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog1.jpg; sourceTree = "<group>"; };
 		1B2698991F4FAD8C00DE9FE1 /* dog2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog2.jpg; sourceTree = "<group>"; };
 		1B26989E1F4FB19200DE9FE1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		1BB0CE771F735A2400D41ACF /* ikstudieicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikstudieicon.png; sourceTree = "<group>"; };
 		3E2D59A31F386BBE00C71B99 /* RespondentsEditMypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RespondentsEditMypageViewController.swift; path = ../RespondentsEditMypageViewController.swift; sourceTree = "<group>"; };
 		3E2D59A51F3B047A00C71B99 /* QuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetailViewController.swift; sourceTree = "<group>"; };
 		3E2D59A71F3B065200C71B99 /* QuestionInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionInventoryViewController.swift; path = ../QuestionInventoryViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				3E7C0F591F2DDF1F00E700E3 /* IkstudieApp3 */,
 				3E7C0F581F2DDF1F00E700E3 /* Products */,
+				1BB0CE771F735A2400D41ACF /* ikstudieicon.png */,
 				1B2698961F4FAD8C00DE9FE1 /* cat1.jpg */,
 				1B2698971F4FAD8C00DE9FE1 /* cat2.jpg */,
 				1B2698981F4FAD8C00DE9FE1 /* dog1.jpg */,
@@ -168,6 +171,7 @@
 				3E7C0F651F2DDF1F00E700E3 /* LaunchScreen.storyboard in Resources */,
 				3E7C0F621F2DDF1F00E700E3 /* Assets.xcassets in Resources */,
 				1B26989C1F4FAD8C00DE9FE1 /* dog1.jpg in Resources */,
+				1BB0CE781F735A2400D41ACF /* ikstudieicon.png in Resources */,
 				3E7C0F601F2DDF1F00E700E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

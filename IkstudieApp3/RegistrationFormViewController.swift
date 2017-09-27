@@ -10,14 +10,23 @@ import UIKit
 
 class RegistrationFormViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
+    //生徒情報保存データ
+    var informations = [Dictionary<String, Any>]()
+    //var information: Dictionary<String, Any?>!
+
+    
+    //nickname
+    @IBOutlet weak var nickNameTextField: UITextField!
     //Univ. name
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var univTextField: UITextField!
     //department of a university
-    @IBOutlet weak var textField2: UITextField!
+    @IBOutlet weak var departTextField: UITextField!
+    
+    
         // 写真を表示するビュー
     @IBOutlet weak var imageView: UIImageView!
     
-    //規定の写真から選ぶ際に使用
+    //規定の写真から選択後のBackボタン時に使用
     @IBAction func goBack(_ segue:UIStoryboardSegue) {}
     
     /*@IBAction func goNext(_ sender:UIButton) {
@@ -25,12 +34,11 @@ class RegistrationFormViewController: UIViewController, UIPickerViewDelegate, UI
         self.present(next,animated: true, completion: nil)
     }*/
     
-    // セグエ遷移用に追加 ↓↓↓
+    // セグエ遷移用に追加,「規定の写真から選択」ボタン
     @IBAction func goNextBySegue(_ sender: UIButton) {
         performSegue(withIdentifier: "nextSegue", sender: nil)
     }
     
-    //
     
     
     
@@ -65,51 +73,57 @@ class RegistrationFormViewController: UIViewController, UIPickerViewDelegate, UI
     let courseList = ["私立理系","私立文系","国立理系","国立文系","その他","未定"]
     let gradeList = ["高校３年生","高校２年生","高校１年生","高校卒業生","中学３年生以下","それ以外"]
     
-    @IBOutlet weak var pickerView1: UIPickerView!
-    @IBOutlet weak var pickerView2: UIPickerView!
+    @IBOutlet weak var coursePickerView: UIPickerView!
+    @IBOutlet weak var gradePickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pickerView1.tag = 1
-        pickerView1.delegate   = self
-        pickerView1.dataSource = self
+        coursePickerView.tag = 1
+        coursePickerView.delegate   = self
+        coursePickerView.dataSource = self
         
-        pickerView2.tag = 2
-        pickerView2.delegate   = self
-        pickerView2.dataSource = self
+        gradePickerView.tag = 2
+        gradePickerView.delegate   = self
+        gradePickerView.dataSource = self
         
         // デフォルトの画像を表示する
         //imageView.image = UIImage(named: "default.png")
         
         // Delegate を設定
-        //textField.tag = 1
-        textField.delegate = self
+        // 大学名入力欄について
+        univTextField.delegate = self
         
         // プレースホルダー
-        textField.placeholder = "テキストを入力"
+        univTextField.placeholder = "○○大学"
         
         // 背景色
-        textField.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        univTextField.backgroundColor = UIColor(white: 0.9, alpha: 1)
         
         // 左の余白
-        textField.leftViewMode = .always
+        univTextField.leftViewMode = .always
         //textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         
         // テキストを全消去するボタンを表示
-        textField.clearButtonMode = .always
+        univTextField.clearButtonMode = .always
         
         // 改行ボタンの種類を変更
-        textField.returnKeyType = .done
+        univTextField.returnKeyType = .done
         
-        // No.2
-        textField2.delegate = self
-        textField2.placeholder = "テ"
-        textField2.backgroundColor = UIColor(white: 0.9, alpha: 1)
-        textField2.leftViewMode = .always
+        // 学部名入力欄について
+        departTextField.delegate = self
+        departTextField.placeholder = "○○学部"
+        departTextField.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        departTextField.leftViewMode = .always
         //textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        textField2.clearButtonMode = .always
-        textField2.returnKeyType = .done
+        departTextField.clearButtonMode = .always
+        departTextField.returnKeyType = .done
+        
+        //ニックネーム入力欄について
+        nickNameTextField.delegate = self
+        nickNameTextField.leftViewMode = .always
+        nickNameTextField.clearButtonMode = .always
+        nickNameTextField.returnKeyType = .done
         
     }
 
@@ -140,14 +154,6 @@ class RegistrationFormViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // 選択時の処理
-        if pickerView.tag == 1 {
-            print(courseList[row])
-        } else {
-            print(gradeList[row])
-        }
-    }
     
     /* 以下は UITextFieldDelegate のメソッド */
     
@@ -155,7 +161,9 @@ class RegistrationFormViewController: UIViewController, UIPickerViewDelegate, UI
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         // キーボードを隠す
-        textField.resignFirstResponder()
+        nickNameTextField.resignFirstResponder()
+        univTextField.resignFirstResponder()
+        departTextField.resignFirstResponder()
         return true
     }
     
@@ -184,6 +192,88 @@ class RegistrationFormViewController: UIViewController, UIPickerViewDelegate, UI
         
     }
     
+    
+        // categoryを保存するためのコード
+    var courseCategory: String?
+    var gradeCategory: String?
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // 選択時の処理
+        courseCategory = courseList[row]
+        gradeCategory = gradeList[row]
+        
+        if pickerView.tag == 1 {
+            print(courseList[row])
+        } else {
+            print(gradeList[row])
+        }
+    }
+    
+    
+    //以下ライオンの生徒情報保存コード改造版
+    //sendQuestion → sendInfo
+    @IBAction func sendInfo() {
+        
+        //ニックネーム入力時の対処法
+        if nickNameTextField.text == ""{
+            
+        //}else{
+            let  alert = UIAlertController(title: "nickname", message: "ニックネームを記入してください", preferredStyle: .alert)
+            let  action = UIAlertAction(title: "OK!", style: .default, handler:{ (action) in})
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        //大学名入力時の対処法
+        else if univTextField.text == ""{
+            
+        //}else{
+            let  alert = UIAlertController(title: "univ", message: "大学名を記入してください", preferredStyle: .alert)
+            let  action = UIAlertAction(title: "OK!", style: .default, handler:{ (action) in})
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+ 
+        
+        //両方記入されていた場合の対処法
+        else /*if nickNameTextField.text != nil && univTextField.text != nil*/ {
+            
+            // UserDefaultsにタイトルと質問内容を辞書型配列に保存する
+            let ud = UserDefaults.standard
+            if ud.object(forKey: "Informations") != nil {
+                print("C")
+                //informations = ud.object(forKey: "informations") as! [Dictionary<String, Any>]
+                let information: Dictionary<String, Any> = ["nickname": nickNameTextField.text!, "course": courseCategory!, "grade": gradeCategory!, "univ": univTextField.text!, "depart": departTextField.text!]
+                informations.append(information)
+            } else {
+                informations = ud.object(forKey: "informations") as! [Dictionary<String, Any>]
+                print("D")
+                let information: Dictionary<String, Any> = ["nickname": nickNameTextField.text!, "course": courseCategory ?? "1未記入", "grade": gradeCategory ?? "2未記入", "univ": univTextField.text!, "depart": departTextField.text!]
+                informations.append(information)
+            }
+            
+            print("w")
+            ud.set(informations, forKey: "informations")
+            ud.synchronize()
+            
+            
+            let alert = UIAlertController(title: "登録完了！", message: "あなたの情報が登録されました！", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK!", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                self.tabBarController?.selectedIndex = 0
+            })
+            
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            
+            // 以下、後で消す
+            informations.reverse()
+            print(informations)
+            
+        }
+        
+    }
+
 
     /*
     // MARK: - Navigation
